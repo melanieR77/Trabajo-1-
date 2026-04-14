@@ -1,0 +1,273 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7rem 8% 4rem;
+  position: relative;
+  overflow: hidden;
+  gap: 3rem;
+}
+
+.blob1 {
+  position: absolute;
+  top: -120px;
+  right: -100px;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, #FDE68A 0%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.blob2 {
+  position: absolute;
+  bottom: -100px;
+  left: -80px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #FED7AA 0%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(var(--amber-light) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+/* CONTENT */
+.content {
+  flex: 1;
+  max-width: 560px;
+  position: relative;
+  z-index: 1;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--amber-light);
+  color: var(--brown);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 1.4rem;
+  border: 1px solid var(--amber);
+}
+
+.title {
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  line-height: 1.1;
+  color: var(--charcoal);
+  margin-bottom: 1.2rem;
+}
+
+.highlight {
+  position: relative;
+  color: var(--amber-dark);
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--amber-light);
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--gray);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.btnPrimary {
+  background: var(--amber);
+  color: var(--charcoal);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  box-shadow: 0 6px 20px rgba(245,158,11,0.4);
+  transition: all 0.25s;
+  animation: pulse-ring 2s infinite;
+}
+
+.btnPrimary:hover {
+  background: var(--amber-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(245,158,11,0.5);
+}
+
+.btnSecondary {
+  color: var(--brown);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.9rem 1.5rem;
+  border-radius: 50px;
+  border: 2px solid var(--amber);
+  transition: all 0.25s;
+}
+
+.btnSecondary:hover {
+  background: var(--amber-light);
+  transform: translateY(-2px);
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat strong {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--brown);
+  font-family: 'Playfair Display', serif;
+}
+
+.stat span {
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+
+.divider {
+  width: 1px;
+  height: 40px;
+  background: var(--gray-light);
+}
+
+/* IMAGE SECTION */
+.imageSection {
+  flex: 1;
+  max-width: 500px;
+  position: relative;
+  z-index: 1;
+}
+
+.mainImageWrap {
+  position: relative;
+  border-radius: 40% 60% 60% 40% / 50% 50% 50% 50%;
+  overflow: hidden;
+  aspect-ratio: 1;
+  box-shadow: 0 30px 80px rgba(146,64,14,0.2);
+  border: 6px solid white;
+}
+
+.mainImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.mainImageWrap:hover .mainImg { transform: scale(1.05); }
+
+.badge2 {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: var(--green);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.4rem 0.9rem;
+  border-radius: 50px;
+  animation: bounce-in 0.8s 0.6s both;
+}
+
+.floatingCard1, .floatingCard2 {
+  position: absolute;
+  background: white;
+  border-radius: 16px;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  animation: float 3s ease-in-out infinite;
+}
+
+.floatingCard1 { bottom: 2rem; left: -2rem; animation-delay: 0s; }
+.floatingCard2 { top: 2rem; left: -2.5rem; animation-delay: 1.5s; }
+
+.cardEmoji { font-size: 1.5rem; }
+
+.floatingCard1 div, .floatingCard2 div {
+  display: flex;
+  flex-direction: column;
+}
+
+.floatingCard1 strong, .floatingCard2 strong {
+  font-size: 0.85rem;
+  color: var(--charcoal);
+}
+
+.floatingCard1 span, .floatingCard2 span {
+  font-size: 0.75rem;
+  color: var(--gray);
+}
+
+/* SCROLL */
+.scrollDown {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 50px;
+  border: 2px solid var(--amber);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.scrollDown span {
+  width: 4px;
+  height: 12px;
+  background: var(--amber);
+  border-radius: 2px;
+  animation: scroll-hint 1.5s ease infinite;
+}
+
+@keyframes scroll-hint {
+  0%   { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(16px); opacity: 0; }
+}
+
+@media (max-width: 900px) {
+  .hero { flex-direction: column; text-align: center; padding-top: 8rem; }
+  .actions { justify-content: center; }
+  .stats { justify-content: center; }
+  .imageSection { max-width: 320px; width: 100%; }
+  .floatingCard1, .floatingCard2 { display: none; }
+}

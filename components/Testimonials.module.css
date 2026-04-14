@@ -1,0 +1,136 @@
+.section {
+  padding: 6rem 8%;
+  background: var(--warm-white);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--amber-light);
+  color: var(--brown);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.35rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  color: var(--charcoal);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  border: 1px solid var(--gray-light);
+  transition: all 0.25s;
+}
+
+.card:hover {
+  border-color: var(--amber);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(245,158,11,0.12);
+}
+
+.stars { font-size: 1rem; margin-bottom: 0.8rem; }
+
+.text {
+  font-size: 0.95rem;
+  color: var(--gray);
+  line-height: 1.65;
+  margin-bottom: 1.2rem;
+  font-style: italic;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.avatar {
+  font-size: 2rem;
+  background: var(--amber-light);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.author div {
+  display: flex;
+  flex-direction: column;
+}
+
+.author strong {
+  font-size: 0.9rem;
+  color: var(--charcoal);
+}
+
+.author span {
+  font-size: 0.78rem;
+  color: var(--gray);
+}
+
+/* BANNER */
+.banner {
+  background: linear-gradient(135deg, var(--amber) 0%, var(--amber-dark) 100%);
+  border-radius: 24px;
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.bannerEmoji { font-size: 3rem; }
+
+.banner div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+}
+
+.banner strong {
+  font-size: 1.3rem;
+  font-family: 'Playfair Display', serif;
+  color: var(--charcoal);
+}
+
+.banner span { color: var(--brown); font-size: 0.95rem; }
+
+.bannerBtn {
+  background: var(--charcoal);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  white-space: nowrap;
+  transition: all 0.25s;
+}
+
+.bannerBtn:hover { background: var(--brown); transform: translateY(-2px); }
+
+@media (max-width: 600px) {
+  .section { padding: 4rem 5%; }
+  .banner { flex-direction: column; text-align: center; padding: 2rem; }
+}

@@ -1,0 +1,119 @@
+.section {
+  padding: 6rem 8%;
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '🐾';
+  position: absolute;
+  font-size: 20rem;
+  opacity: 0.04;
+  right: -2rem;
+  bottom: -3rem;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.textSide { flex: 1; max-width: 480px; }
+
+.tag {
+  display: inline-block;
+  background: var(--amber-light);
+  color: var(--brown);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.35rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  line-height: 1.15;
+  color: var(--charcoal);
+  margin-bottom: 1.2rem;
+}
+
+.desc {
+  color: var(--gray);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--amber);
+  color: var(--charcoal);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  transition: all 0.25s;
+  box-shadow: 0 4px 16px rgba(245,158,11,0.35);
+}
+
+.btn:hover {
+  background: var(--amber-dark);
+  transform: translateY(-2px);
+}
+
+/* FEATURES */
+.featuresSide {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.feature {
+  background: white;
+  border-radius: 20px;
+  padding: 1.4rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  border: 1px solid var(--gray-light);
+  transition: all 0.25s;
+}
+
+.feature:hover {
+  border-color: var(--amber);
+  box-shadow: 0 8px 30px rgba(245,158,11,0.15);
+  transform: translateY(-3px);
+}
+
+.featureIcon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.featureTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 0.3rem;
+}
+
+.featureDesc {
+  font-size: 0.82rem;
+  color: var(--gray);
+  line-height: 1.5;
+}
+
+@media (max-width: 1000px) {
+  .section { flex-direction: column; gap: 3rem; }
+  .textSide { max-width: 100%; }
+}
+
+@media (max-width: 600px) {
+  .featuresSide { grid-template-columns: 1fr; }
+  .section { padding: 4rem 5%; }
+}
