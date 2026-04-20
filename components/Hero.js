@@ -49,7 +49,7 @@ export default function Hero() {
         <div className={styles.mainImageWrap} style={{ float: 'none' }}>
           <img
             className={`${styles.mainImg} float`}
-            src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80"
+            src="hero.jpg"
             alt="Perrito dorado feliz"
           />
           <div className={styles.badge2}>🐶 ¡Disponible!</div>
