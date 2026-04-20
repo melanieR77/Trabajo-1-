@@ -10,7 +10,7 @@ export default function Footer() {
             <span className={styles.logoText}>Venta de Perritos</span>
           </div>
           <p className={styles.tagline}>
-            Criando amor con cuatro patas desde 2014. Tu compañero ideal te espera en Honduras.
+          Tu compañero ideal te espera.
           </p>
           <div className={styles.socials}>
             <a href="#" aria-label="Facebook" className={styles.social}>📘</a>
@@ -55,7 +55,7 @@ export default function Footer() {
 
       <div className={styles.bottom}>
         <p>© {new Date().getFullYear()} Venta de Perritos Honduras. Todos los derechos reservados. 🐾</p>
-        <p>Hecho con ❤️ en San Pedro Sula, Honduras</p>
+        <p>San Pedro Sula, Honduras</p>
       </div>
     </footer>
   );
